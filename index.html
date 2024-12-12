@@ -13,13 +13,11 @@
             color: white;
             margin: 0;
             padding: 0;
-            overflow: hidden;
+            overflow: auto; /* Enable scrolling */
+            min-height: 100vh; /* Allow the content to grow vertically */
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            flex-direction: column; /* Ensure content stacks vertically */
         }
-
         .title-box {
             background-color: rgba(255, 255, 255, 0.8);
             padding: 10px 0;
