@@ -87,7 +87,7 @@
 
         .logo-container {
             display: flex;
-            gap: 10px;  /* Adds space between the icons */
+            gap: 20px;  /* Adds space between the icons */
             position: absolute;
             top: 10px;
             left: 10px;
@@ -95,8 +95,12 @@
             align-items: center;
         }
 
+        .logo-item {
+            text-align: center;  /* Center the label text under the image */
+        }
+
         .logo-link img {
-            max-width: 75px;  /* Make sure they are consistent in size */
+            max-width: 75px;
             max-height: 75px;
             border-radius: 20%;
             transition: transform 0.3s ease;
@@ -105,6 +109,15 @@
         .logo-link img:hover {
             transform: scale(1.15);
         }
+
+        .logo-label {
+            color: white;
+            font-size: 1rem;
+            margin-top: 5px;  /* Adds space between image and label */
+            font-family: 'Suleiman', Arial, sans-serif;  /* Ensure custom font is used */
+            font-weight: bold;
+        }
+
 
         footer {
         position: fixed;
@@ -137,16 +150,28 @@
 <body>
     <!-- Logo linking to Home page -->
     <div class="logo-container">
-        <a href="index.html" class="logo-link">
-            <img src="https://raw.githubusercontent.com/sadlyefm/sadlyefm.github.io/5fbdc1bbe7defac54d8967582ddee776338c7c3b/visuals/angel.jpg" alt="Angel Logo">
-        </a>
-        <a href="https://instagram.com/sadlye.fm" target="_blank" class="logo-link">
-            <img src="https://raw.githubusercontent.com/sadlyefm/sadlyefm.github.io/a0ad999f635f9c3ec447fc0952cc69565a1e125d/visuals/sarah.png" alt="Email">
-        </a>
-        <a href="mailto:sadeelmu@outlook.com" class="logo-link">
-            <img src="https://raw.githubusercontent.com/sadlyefm/sadlyefm.github.io/5fbdc1bbe7defac54d8967582ddee776338c7c3b/visuals/mandelbulb.png" alt="Instagram">
-        </a>
-    </div>
+        <div class="logo-item">
+            <a href="index.html" class="logo-link">
+                <img src="https://raw.githubusercontent.com/sadlyefm/sadlyefm.github.io/5fbdc1bbe7defac54d8967582ddee776338c7c3b/visuals/angel.jpg" alt="Angel Logo">
+            </a>
+            <p class="logo-label">home</p>
+        </div>
+        
+        <div class="logo-item">
+            <a href="https://instagram.com/sadlye.fm" target="_blank" class="logo-link">
+                <img src="https://raw.githubusercontent.com/sadlyefm/sadlyefm.github.io/a0ad999f635f9c3ec447fc0952cc69565a1e125d/visuals/sarah.png" alt="Instagram">
+            </a>
+            <p class="logo-label">instagram</p>
+        </div>
+        
+        <div class="logo-item">
+            <a href="mailto:sadeelmu@outlook.com" class="logo-link">
+                <img src="https://raw.githubusercontent.com/sadlyefm/sadlyefm.github.io/5fbdc1bbe7defac54d8967582ddee776338c7c3b/visuals/mandelbulb.png" alt="Email">
+            </a>
+            <p class="logo-label">email</p>
+        </div>
+    </div>    
+    
     
     <div class="title-box">
         <h1>sadlye.fm</h1>
