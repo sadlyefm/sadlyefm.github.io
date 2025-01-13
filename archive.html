@@ -83,26 +83,29 @@
             width: 100%;
             height: 100%;
         }
+        
 
-        .logo-link {
+        .logo-container {
+            display: flex;
+            gap: 10px;  /* Adds space between the icons */
             position: absolute;
             top: 10px;
             left: 10px;
             z-index: 20;
-            cursor: pointer;
+            align-items: center;
         }
 
         .logo-link img {
-            width: 75px; /* Increased the size */
-            height: 75px; /* Increased the size */
+            max-width: 75px;  /* Make sure they are consistent in size */
+            max-height: 75px;
             border-radius: 20%;
             transition: transform 0.3s ease;
         }
 
         .logo-link img:hover {
-            transform: scale(1.1);
+            transform: scale(1.15);
         }
-
+        
         footer {
         position: fixed;
         bottom: 10px;
@@ -133,10 +136,18 @@
 </head>
 <body>
     <!-- Logo linking to Home page -->
-    <a href="index.html" class="logo-link">
-        <img src="https://raw.githubusercontent.com/sadeelmu/sadeelmu.github.io/c1cfdde1af05697ee4c728998e01846159ee700f/visuals/angel.jpg" alt="Angel Logo"> 
-    </a>
-
+    <div class="logo-container">
+        <a href="index.html" class="logo-link">
+            <img src="https://raw.githubusercontent.com/sadlyefm/sadlyefm.github.io/5fbdc1bbe7defac54d8967582ddee776338c7c3b/visuals/angel.jpg" alt="Angel Logo">
+        </a>
+        <a href="https://instagram.com/sadlye.fm" target="_blank" class="logo-link">
+            <img src="https://raw.githubusercontent.com/sadlyefm/sadlyefm.github.io/5fbdc1bbe7defac54d8967582ddee776338c7c3b/visuals/mandelbulb.png" alt="Instagram">
+        </a>
+        <a href="mailto:sadeelmu@outlook.com" class="logo-link">
+            <img src="https://raw.githubusercontent.com/sadlyefm/sadlyefm.github.io/dfc26c352fff71f4133f1f6e8e5fa88ca4142a3b/visuals/sarah.heic" alt="Email">
+        </a>
+    </div>
+    
     <div class="title-box">
         <h1>sadlye.fm</h1>
         <h2>visuals archive</h2>
