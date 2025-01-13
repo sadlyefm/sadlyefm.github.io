@@ -99,27 +99,33 @@
             overflow: hidden;
         }
 
-        .logo-link {
+        .logo-container {
+            display: flex;
+            gap: 10px;
             position: absolute;
             top: 10px;
             left: 10px;
             z-index: 20;
-            cursor: pointer;
+            align-items: center;
         }
 
         .logo-link img {
             max-width: 75px;
-
-            min-width: 10px;
-            min-height: 10px;
             max-height: 75px;
-
             border-radius: 20%;
             transition: transform 0.3s ease;
         }
 
         .logo-link img:hover {
             transform: scale(1.15);
+        }
+
+        .logo-link {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 20;
+            cursor: pointer;
         }
 
         .playlist-details {
@@ -195,10 +201,18 @@
     </style>
 </head>
 <body>
-    <a href="index.html" class="logo-link">
-        <img src="https://raw.githubusercontent.com/sadeelmu/sadeelmu.github.io/c1cfdde1af05697ee4c728998e01846159ee700f/visuals/angel.jpg" alt="Angel Logo">
-    </a>
-
+    <div class="logo-container">
+        <a href="index.html" class="logo-link">
+            <img src="https://raw.githubusercontent.com/sadlyefm/sadlyefm.github.io/5fbdc1bbe7defac54d8967582ddee776338c7c3b/visuals/angel.jpg" alt="Angel Logo">
+        </a>
+        <a href="https://instagram.com/sadlye.fm" class="logo-link">
+            <img src="https://raw.githubusercontent.com/sadlyefm/sadlyefm.github.io/5fbdc1bbe7defac54d8967582ddee776338c7c3b/visuals/mandelbulb.png" alt="Instagram">
+        </a>
+        <a href="mailto:sadeelmu@outlook.com" class="logo-link">
+            <img src="https://raw.githubusercontent.com/sadlyefm/sadlyefm.github.io/5fbdc1bbe7defac54d8967582ddee776338c7c3b/visuals/mandelbulb.png" alt="Email">
+        </a>
+    </div>
+    
     <div class="title-box">
         <h1>sadlye.fm</h1>
         <h2>why did god spare you?</h2>
