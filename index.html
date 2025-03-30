@@ -139,6 +139,15 @@
             margin: 5px 0;
         }
 
+        .playlist-cover {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 0 auto 10px;
+            display: block;
+        }
+
         .a {
             color: white;
             font-weight: bold;
@@ -193,7 +202,7 @@
         .audio-cover {
             width: 80px;
             height: 80px;
-            background-image: url('https://raw.githubusercontent.com/sadlyefm/sadlyefm.github.io/3abdf94d94635752333fd35c72ab57f44871cfa8/visuals/sarah.png');
+            background-image: url('https://raw.githubusercontent.com/sadlyefm/sadlyefm.github.io/799e4147c2b910e5ffdccdcb712bc166fada57b7/visuals/electrosteen.jpg');
             background-size: cover;
             background-position: center;
             flex-shrink: 0;
@@ -249,6 +258,11 @@
             .main-content-wrapper {
                 padding: 10px;
                 gap: 5px;
+            }
+            
+            .playlist-cover {
+                width: 150px;
+                height: 150px;
             }
             
             .audio-container {
@@ -327,7 +341,7 @@
         <div class="radio-box">
             <div class="playlist-details">
                 <h2 id="playlistName">karmen electrosteen</h2>
-                <img id="playlistCover" src="https://raw.githubusercontent.com/sadlyefm/sadlyefm.github.io/3abdf94d94635752333fd35c72ab57f44871cfa8/visuals/sarah.png" alt="Playlist Cover" style="border-radius: 10px; padding-bottom: 10px;">
+                <img class="playlist-cover" src="https://raw.githubusercontent.com/sadlyefm/sadlyefm.github.io/3abdf94d94635752333fd35c72ab57f44871cfa8/visuals/sarah.png" alt="Playlist Cover">
             </div>
             <div class="audio-container">
                 <div class="audio-cover"></div>
