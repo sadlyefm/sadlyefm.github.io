@@ -178,15 +178,45 @@
             height: 100%;
         }
 
-        /* Audio player styling */
+        /* Custom Audio Player Styling */
+        .audio-container {
+            background-color: #181818;
+            border-radius: 10px;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        
         .audio-player {
             width: 100%;
-            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         
         audio {
             width: 100%;
-            border-radius: 10px;
+            height: 40px;
+            margin-top: 10px;
+        }
+        
+        audio::-webkit-media-controls-panel {
+            background-color: #181818;
+            border-radius: 5px;
+        }
+        
+        audio::-webkit-media-controls-play-button,
+        audio::-webkit-media-controls-mute-button {
+            filter: invert(1);
+        }
+        
+        audio::-webkit-media-controls-current-time-display,
+        audio::-webkit-media-controls-time-remaining-display {
+            color: white;
+        }
+        
+        audio::-webkit-media-controls-timeline {
+            background-color: #535353;
+            border-radius: 5px;
         }
 
         /* Media queries for responsive adjustments */
@@ -275,10 +305,10 @@
         <!-- Radio Box -->
         <div class="radio-box">
             <div class="playlist-details">
-                <h2>karmen electrosteen</h2>
+                <h2 id="playlistName">karmen electrosteen</h2>
                 <img id="playlistCover" src="https://raw.githubusercontent.com/sadeelmu/sadeelmu.github.io/fb50038f965f08c4b3f48476df3766a485c5b217/visuals/sarah.png" alt="Playlist Cover" style="border-radius: 10px; padding-bottom: 10px;">
             </div>
-            <div class="control-buttons">
+            <div class="audio-container">
                 <div class="audio-player">
                     <audio controls autoplay>
                         <source src="https://github.com/sadlyefm/sadlyefm.github.io/blob/a15242365724293f3d1eb0139b06e2dcce252964/karmen%20electrosteen.mp3?raw=true" type="audio/mp3">
