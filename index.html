@@ -263,36 +263,66 @@
 
         /* Media queries for responsive adjustments */
         @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+                height: auto;
+                align-items: flex-start;
+                overflow-y: auto;
+            }
+
+            .main-content-wrapper {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 10px;
+                gap: 15px;
+            }
+
+            .repository-panel, .radio-box {
+                width: 90%;
+                max-width: none;
+                min-width: unset;
+                margin-bottom: 20px;
+            }
+
+            .panel__repositorygrid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .playlist-cover {
+                width: 100%;
+                height: auto;
+            }
+
+            .audio-container {
+                height: auto;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .audio-cover {
+                width: 60px;
+                height: 60px;
+            }
+
             .title-box h1 {
                 font-size: 10vw;
             }
 
             .title-box h2 {
-                font-size: 8vw;
+                font-size: 5vw;
             }
 
-            .repository-panel, .radio-box {
-                min-width: 90%;
-                max-width: none;
+            .logo-container {
+                flex-direction: column;
+                align-items: flex-start;
+                left: 10px;
+                top: auto;
+                bottom: 10px;
             }
 
-            .main-content-wrapper {
-                padding: 10px;
-                gap: 5px;
-            }
-            
-            .playlist-cover {
-                width: 150px;
-                height: 150px;
-            }
-            
-            .audio-container {
-                height: 60px;
-            }
-            
-            .audio-cover {
-                width: 60px;
-                height: 60px;
+            .logo-item {
+                margin-bottom: 10px;
             }
         }
     </style>
