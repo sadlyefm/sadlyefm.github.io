@@ -77,15 +77,15 @@
         }
 
         /* Scrollable canvas background */
-         #mandelbrotCanvas {
-            position: fixed;
+        #mandelbrotCanvas {
+            position: absolute;
             top: 0;
             left: 0;
             z-index: 0;
-            width: 100vw;
-            height: 100vh;
+            width: 100%;
+            height: 100%;
         }
-
+        
         .logo-container {
             display: flex;
             gap: 7px;  /* Adds space between the icons */
@@ -143,39 +143,6 @@
     footer i {
         margin-right: 5px;
     }
-
-        @media (max-width: 768px) {
-        .archive-content-wrapper {
-            grid-template-columns: 1fr;
-            height: auto;
-            overflow-y: visible;
-            padding: 10px;
-        }
-
-        .title-box h1 {
-            font-size: 9vw;
-        }
-
-        .title-box h2 {
-            font-size: 4.5vw;
-        }
-
-        .logo-container {
-            flex-direction: column;
-            align-items: flex-start;
-            position: static;
-            margin: 10px;
-        }
-
-        .logo-item {
-            margin-bottom: 10px;
-        }
-
-        .archive-item {
-            padding: 15px;
-        }
-    }
-
     </style>
         <script data-goatcounter="https://sadlye.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
@@ -335,7 +302,7 @@
                 <source src="https://raw.githubusercontent.com/sadlyefm/sadlyefm.github.io/ff2cb728a1b3be873fdea47012ee5b22bc5b0d52/visuals/petitbain.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <h3>Cam stream</h3>
+            <h3>Cam streaming</h3>
             <p><span class="info-label">Content:</span> Behind the decks at Valentines Alternative party for the La Voision collective in Petit Bain, Paris.</p>
             <p><span class="info-label">Technique:</span> Live streaming interactive with the crowd</p>
         </div>  
