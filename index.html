@@ -27,7 +27,7 @@
 
         @font-face {
             font-family: 'Suleiman';
-            src: url('/Users/sadlye/Documents/website/sadlyefm.github.io/fonts/ALLEXP02SULEIMAN-Regular.ttf') format('truetype');
+            src: url('fonts/ALLEXP02SULEIMAN-Regular.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
         }
@@ -266,8 +266,50 @@
             body {
                 flex-direction: column;
                 height: auto;
-                align-items: flex-start;
+                align-items: center;
                 overflow-y: auto;
+                overflow-x: hidden;
+                padding-top: 70px;
+            }
+
+            .logo-container {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.85);
+                padding: 6px 10px;
+                box-sizing: border-box;
+                z-index: 30;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 10px;
+            }
+
+            .logo-link img {
+                max-width: 44px;
+                max-height: 44px;
+            }
+
+            .logo-label {
+                font-size: 0.55rem;
+            }
+
+            .title-box {
+                position: relative;
+                top: auto;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .title-box h1 {
+                font-size: 10vw;
+            }
+
+            .title-box h2 {
+                font-size: 4vw;
             }
 
             .main-content-wrapper {
@@ -276,6 +318,9 @@
                 justify-content: center;
                 padding: 10px;
                 gap: 15px;
+                padding-top: 120px;
+                width: 100%;
+                box-sizing: border-box;
             }
 
             .repository-panel, .radio-box {
@@ -286,7 +331,7 @@
             }
 
             .panel__repositorygrid {
-                grid-template-columns: 1fr !important;
+                grid-template-columns: repeat(2, 1fr) !important;
             }
 
             .playlist-cover {
@@ -305,24 +350,12 @@
                 height: 60px;
             }
 
-            .title-box h1 {
-                font-size: 10vw;
+            .playlist-details h2 {
+                font-size: 6vw;
             }
 
-            .title-box h2 {
-                font-size: 5vw;
-            }
-
-            .logo-container {
-                flex-direction: column;
-                align-items: flex-start;
-                left: 10px;
-                top: auto;
-                bottom: 10px;
-            }
-
-            .logo-item {
-                margin-bottom: 10px;
+            .a {
+                font-size: 4vw;
             }
         }
     </style>
@@ -339,17 +372,17 @@
         </div>
         
         <div class="logo-item">
-            <a href="https://instagram.com/sadlye.fm" target="_blank" class="logo-link">
+            <a href="https://www.instagram.com/sadlyefm" target="_blank" rel="noopener noreferrer" class="logo-link">
                 <img src="https://raw.githubusercontent.com/sadlyefm/sadlyefm.github.io/a0ad999f635f9c3ec447fc0952cc69565a1e125d/visuals/sarah.png" alt="Instagram">
             </a>
             <h2 class="logo-label">instagram</h2>
         </div>
         
         <div class="logo-item">
-            <a href="mailto:sadlye@angelic.com" class="logo-link">
+            <a href="mailto:sadeelmu@outlook.com" class="logo-link">
                 <img src="https://raw.githubusercontent.com/sadlyefm/sadlyefm.github.io/5fbdc1bbe7defac54d8967582ddee776338c7c3b/visuals/mandelbulb.png" alt="Email">
-            </a>            
-            <h2 class="logo-label">email: sadlye @ angelic dot com</h2>            
+            </a>
+            <h2 class="logo-label">email: sadeelmu @ outlook dot com</h2>            
         </div>        
     </div>    
     

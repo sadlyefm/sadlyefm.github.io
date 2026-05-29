@@ -13,7 +13,7 @@
             color: white;
             margin: 0;
             padding: 0;
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
         .title-box {
@@ -143,6 +143,66 @@
     footer i {
         margin-right: 5px;
     }
+
+    @media (max-width: 768px) {
+        body {
+            overflow-y: auto;
+        }
+
+        .title-box {
+            padding-top: 80px;
+        }
+
+        .title-box h1 {
+            font-size: 32px;
+        }
+
+        .title-box h2 {
+            font-size: 12px;
+        }
+
+        .logo-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            padding: 6px 10px;
+            box-sizing: border-box;
+            z-index: 30;
+            justify-content: flex-start;
+        }
+
+        .logo-link img {
+            max-width: 44px;
+            max-height: 44px;
+        }
+
+        .logo-label {
+            font-size: 0.55rem;
+        }
+
+        .archive-content-wrapper {
+            grid-template-columns: 1fr;
+            height: auto;
+            max-height: none;
+            overflow-y: visible;
+            padding: 12px;
+            padding-bottom: 60px;
+        }
+
+        footer {
+            font-size: 12px;
+            padding: 8px;
+        }
+    }
+
+    @media (min-width: 769px) and (max-width: 1100px) {
+        .archive-content-wrapper {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
     </style>
         <script data-goatcounter="https://sadlye.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
@@ -158,17 +218,17 @@
         </div>
         
         <div class="logo-item">
-            <a href="https://instagram.com/sadlye.fm" target="_blank" class="logo-link">
+            <a href="https://www.instagram.com/sadlyefm" target="_blank" rel="noopener noreferrer" class="logo-link">
                 <img src="https://raw.githubusercontent.com/sadlyefm/sadlyefm.github.io/a0ad999f635f9c3ec447fc0952cc69565a1e125d/visuals/sarah.png" alt="Instagram">
             </a>
             <h2 class="logo-label">instagram</h2>
         </div>
         
         <div class="logo-item">
-            <a href="mailto:sadlye@angelic.com" class="logo-link">
+            <a href="mailto:sadeelmu@outlook.com" class="logo-link">
                 <img src="https://raw.githubusercontent.com/sadlyefm/sadlyefm.github.io/5fbdc1bbe7defac54d8967582ddee776338c7c3b/visuals/mandelbulb.png" alt="Email">
-            </a>            
-            <h2 class="logo-label">email: sadlye @ angelic dot com</h2>            
+            </a>
+            <h2 class="logo-label">email: sadeelmu @ outlook dot com</h2>            
         </div>         
     </div>    
     
