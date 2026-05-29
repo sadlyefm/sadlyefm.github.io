@@ -150,7 +150,7 @@
         }
 
         .title-box {
-            padding-top: 80px;
+            padding-top: 10px;
         }
 
         .title-box h1 {
@@ -162,16 +162,15 @@
         }
 
         .logo-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
+            position: relative;
+            top: auto;
+            left: auto;
             width: 100%;
-            background-color: rgba(0, 0, 0, 0.85);
-            padding: 6px 10px;
+            background-color: transparent;
+            padding: 10px 0 0 0;
             box-sizing: border-box;
             z-index: 30;
-            justify-content: flex-start;
+            justify-content: center;
         }
 
         .logo-link img {
@@ -195,6 +194,10 @@
         footer {
             font-size: 12px;
             padding: 8px;
+        }
+
+        #mandelbrotCanvas {
+            position: fixed;
         }
     }
 
