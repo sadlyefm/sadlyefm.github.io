@@ -68,6 +68,24 @@
             border-radius: 8px;
         }
 
+        .archive-item:has(video) {
+            position: relative;
+        }
+
+        .archive-item:has(video)::after {
+            content: 'sadlyefm';
+            position: absolute;
+            top: 28px;
+            right: 28px;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            pointer-events: none;
+            z-index: 10;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+        }
+
         .archive-item .info-label {
             font-weight: bold;
             color: #fffa;
@@ -447,7 +465,7 @@
     </div>
     
     <footer>
-        &copy; 2026 sadlye. All rights reserved. Unauthorized reproduction, distribution, or commercial use of any content on this site is strictly prohibited.
+        &copy; 2026 sadlyefm. All rights reserved / Tous droits réservés. Unauthorized reproduction, distribution, or commercial use of any content on this site is strictly prohibited.
     </footer>
 
     <!-- Mandelbrot Canvas (Background) -->
