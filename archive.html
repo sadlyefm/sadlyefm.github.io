@@ -41,15 +41,16 @@
         /* Scrollable content container with 3 items per row */
         .archive-content-wrapper {
             padding: 20px;
-            max-width: calc(100% - 20px); /* Ensures space on the right */
-            margin: 0 auto; /* Centers the content */
+            padding-bottom: 50px;
+            max-width: calc(100% - 20px);
+            margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             position: relative;
             z-index: 20;
             overflow-y: scroll;
-            height: 80vh;
+            height: calc(80vh - 40px);
         }
         
         .archive-item {
@@ -186,7 +187,7 @@
             max-height: none;
             overflow-y: visible;
             padding: 12px;
-            padding-bottom: 60px;
+            padding-bottom: 80px;
         }
 
         footer {
