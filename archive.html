@@ -187,7 +187,17 @@
             padding: 10px 0 0 0;
             box-sizing: border-box;
             z-index: 30;
+            display: flex;
             justify-content: center;
+            align-items: center;
+        }
+
+        .logo-item {
+            text-align: center;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .logo-link img {
@@ -465,7 +475,7 @@
     </div>
     
     <footer>
-        &copy; 2026 sadlyefm. All rights reserved / Tous droits réservés. Unauthorized reproduction, distribution, or commercial use of any content on this site is strictly prohibited.
+        &copy; 2026 sadlyefm. All rights reserved. Unauthorized reproduction, distribution, or commercial use of any content on this site is strictly prohibited.
     </footer>
 
     <!-- Mandelbrot Canvas (Background) -->
@@ -506,6 +516,23 @@
         }
 
         drawMandelbrot();
+
+        document.querySelectorAll('video').forEach(function(video) {
+            video.addEventListener('loadedmetadata', function() {
+                video.currentTime = 0.5;
+            });
+            video.addEventListener('seeked', function handler() {
+                const canvas = document.createElement('canvas');
+                canvas.width = video.videoWidth || 640;
+                canvas.height = video.videoHeight || 360;
+                const ctx = canvas.getContext('2d');
+                ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+                try {
+                    video.poster = canvas.toDataURL('image/jpeg', 0.8);
+                } catch(e) {}
+                video.removeEventListener('seeked', handler);
+            });
+        });
     </script>
 </body>
 </html>
