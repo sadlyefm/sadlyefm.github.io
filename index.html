@@ -425,7 +425,7 @@
     </div>    
     
     <div class="title-box">
-        <h1>sadlye.fm</h1>
+        <h1>sadlyefm</h1>
         <h2>why did god spare you?</h2>
     </div>
 
@@ -483,7 +483,6 @@
     <canvas id="mandelbrotCanvas"></canvas>
 
     <script>
-        // Mandelbrot Rendering Script
         function drawMandelbrot() {
             const canvas = document.getElementById('mandelbrotCanvas');
             const ctx = canvas.getContext('2d');
@@ -495,25 +494,29 @@
             const panX = 2;
             const panY = 1.5;
 
+            const imageData = ctx.createImageData(width, height);
+            const data = imageData.data;
+
             for (let x = 0; x < width; x++) {
                 for (let y = 0; y < height; y++) {
                     let zx = (x / zoom) - panX;
                     let zy = (y / zoom) - panY;
-                    let cX = zx;
-                    let cY = zy;
-                    let i = maxIterations;
+                    let cX = zx, cY = zy, i = maxIterations;
                     while (zx * zx + zy * zy < 4 && i > 0) {
                         let tmp = zx * zx - zy * zy + cX;
                         zy = 2.0 * zx * zy + cY;
                         zx = tmp;
                         i--;
                     }
-
-                    const pixelColor = (i === 0) ? 0 : i * 16;
-                    ctx.fillStyle = `rgb(${pixelColor}, ${pixelColor}, ${pixelColor})`;
-                    ctx.fillRect(x, y, 1, 1);
+                    const c = (i === 0) ? 0 : i * 16;
+                    const idx = (y * width + x) * 4;
+                    data[idx] = c;
+                    data[idx + 1] = c;
+                    data[idx + 2] = c;
+                    data[idx + 3] = 255;
                 }
             }
+            ctx.putImageData(imageData, 0, 0);
         }
 
         drawMandelbrot();
